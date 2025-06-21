@@ -9,6 +9,8 @@
             font-family: 'Times New Roman', Times, serif;
             margin: 0;
             padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
         header {
             background-color: #000;
@@ -18,137 +20,236 @@
         .contact-info {
             display: inline-block;
             color: white;
+            font-size: 14px;
         }
         .contact-info a {
             color: white;
             text-decoration: none;
-            margin-right: 15px;
+            margin-right: 10px;
+        }
+        .contact-info img {
+            vertical-align: middle;
+            margin-right: 5px;
         }
         .navbar {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             background-color: #000;
             padding: 15px 0;
         }
+        .navbar img {
+            margin-bottom: 15px;
+        }
         .navbar h2 {
             color: white;
             margin: 0;
+            text-align: center;
         }
         .navbar a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
+            margin: 0 10px;
+            font-size: 14px;
         }
         .hero-section {
             display: flex;
+            flex-direction: column;
             align-items: center;
-            padding: 30px;
+            padding: 20px;
             background-color: #f0f9ff; 
+        }
+        .hero-section img {
+            width: 100%;
+            max-width: 380px;
+            height: auto;
+            margin-bottom: 20px;
         }
         .portfolio-section {
             background-color: #000;
             color: white;
-            padding: 30px 0;
+            padding: 20px 0;
             text-align: center;
+        }
+        .portfolio-section h1 {
+            font-size: 32px;
+            margin: 20px 0;
+        }
+        .image-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            padding: 0 10px;
+        }
+        .image-row img {
+            width: calc(50% - 5px);
+            max-width: 300px;
+            height: auto;
         }
         .services-section {
             background-color: #f0f9ff;
-            padding: 30px 0;
+            padding: 20px 0;
             text-align: center;
         }
-        body {
-            font-family: 'Times New Roman', Times, serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-            color: #333;
+        .services-section h1 {
+            color: #000;
+            font-size: 32px;
+            margin: 20px 0;
         }
-        
         .services-container {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 30px;
-            padding: 50px 20px;
+            gap: 20px;
+            padding: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
-        
         .service-card {
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            padding: 30px;
-            width: 250px;
+            padding: 20px;
+            width: 100%;
+            max-width: 250px;
             transition: transform 0.3s ease;
         }
-        
         .service-card:hover {
             transform: translateY(-5px);
         }
-        
         .service-title {
             color: #000;
-            font-size: 24px;
-            margin-bottom: 15px;
+            font-size: 20px;
+            margin-bottom: 10px;
             font-weight: bold;
         }
-        
         .service-description {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.5;
         }
-
         .contact-section {
             background-color: #000000;
-            padding: 50px 20px;
+            padding: 30px 20px;
             text-align: center;
-            color: #333;
+            color: #ffffff;
         }
-        
         .contact-title {
-            font-size: 28px;
+            font-size: 24px;
             font-weight: bold;
-            margin-bottom: 20px;
-            color: #ffffff; 
+            margin-bottom: 15px;
         }
-        
         .contact-description {
-            font-size: 16px;
-            line-height: 1.6;
+            font-size: 14px;
+            line-height: 1.5;
             max-width: 800px;
-            margin: 0 auto 30px;
+            margin: 0 auto 20px;
         }
-        
         .whatsapp-button {
             display: inline-block;
             background-color: #25D366;
             color: white;
-            padding: 12px 25px;
+            padding: 10px 20px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
             font-size: 16px;
             transition: background-color 0.3s;
         }
-        
         .whatsapp-button:hover {
             background-color: #128C7E;
         }
-        
-        .whatsapp-button i {
+        .whatsapp-button img {
+            vertical-align: middle;
             margin-right: 8px;
+        }
+
+        /* Desktop styles */
+        @media (min-width: 768px) {
+            .contact-info {
+                font-size: 16px;
+            }
+            .contact-info a {
+                margin-right: 15px;
+            }
+            .navbar {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 15px 50px;
+            }
+            .navbar img {
+                margin-bottom: 0;
+            }
+            .navbar h2 {
+                margin-left: 20px;
+            }
+            .navbar a {
+                font-size: 16px;
+                margin: 0 15px;
+            }
+            .hero-section {
+                flex-direction: row;
+                padding: 30px;
+            }
+            .hero-section img {
+                width: 380px;
+                height: 450px;
+                margin-right: 30px;
+                margin-bottom: 0;
+            }
+            .hero-section h1 {
+                font-size: 60px;
+            }
+            .hero-section h2 {
+                font-size: 45px;
+            }
+            .hero-section p {
+                font-size: 24px;
+            }
+            .portfolio-section {
+                padding: 30px 0;
+            }
+            .portfolio-section h1 {
+                font-size: 65px;
+            }
+            .image-row {
+                gap: 20px;
+                padding: 0;
+            }
+            .image-row img {
+                width: auto;
+            }
+            .services-section {
+                padding: 30px 0;
+            }
+            .services-section h1 {
+                font-size: 65px;
+            }
+            .services-container {
+                gap: 30px;
+                padding: 50px 20px;
+            }
+            .contact-section {
+                padding: 50px 20px;
+            }
+            .contact-title {
+                font-size: 28px;
+            }
+            .contact-description {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <div class="contact-info" style="text-align: left;">
-            <img src="logojam2.jpg" width="20" height="20" style="vertical-align: middle;"> Working days 09:00-20:00 & Weekends 09:00-18:00
-            <img src="logolokp.jpg" width="20" height="20" style="vertical-align: middle;"> Mega Regency
+        <div class="contact-info" style="text-align: center;">
+            <span><img src="logojam2.jpg" width="20" height="20"> Working days 09:00-20:00 & Weekends 09:00-18:00</span>
+            <span><img src="logolokp.jpg" width="20" height="20"> Mega Regency</span>
             <a href="https://www.instagram.com/_nichanissa?igsh=MXd6em9seHYzdnZoOA==">
-                <img src="logoinsp.png" width="20" height="20" style="vertical-align: middle;"> _nichanissa
+                <img src="logoinsp.png" width="20" height="20"> _nichanissa
             </a>
         </div>
     </header>
@@ -167,70 +268,71 @@
         </div>
         
         <div class="hero-section">
-            <img src="makeup.jpg" width="380" height="450" style="margin-right: 10px;">
+            <img src="makeup.jpg" alt="Makeup Artwork">
             <div style="flex: 1; text-align: center;">
-                <h1 style="color: #000; font-size: 60px; margin-top: 0; margin-bottom: 0;">NISSA MUA</h1>
-                <h2 style="color: #000; font-size: 45px; margin-top: 0;">Jasa Makeup Artis - MUA Bekasi</h2>
-                <p style="color: #333; font-size: 24px; text-align: justify;" >
+                <h1 style="color: #000; margin-top: 0; margin-bottom: 0;">NISSA MUA</h1>
+                <h2 style="color: #000; margin-top: 0;">Jasa Makeup Artis - MUA Bekasi</h2>
+                <p style="color: #333; text-align: justify;">
                     Sedang cari Jasa MUA / Professional Makeup Artis terdekat? Buat kalian yang mencari MUA di Bekasi bisa konsultasi dan booking layanan Makeup Artis di Nissa MUA. Tersedia layanan Jasa Makeup Artist untuk acara Engagement, Prewedding, Wedding, Photoshoot, Wisuda, Sweet Seventeen dan acara lainnya. Ayo konsultasi dan booking sekarang dengan menghubungi kontak Nissa MUA Bekasi.
                 </p>
             </div>
         </div>
         
         <div class="portfolio-section">
-            <h1 style="font-size: 65px; margin-top: 0;" >Portofolio NISSA MUA</h1>
+            <h1 style="margin-top: 0;">Portofolio NISSA MUA</h1>
             <div class="image-row">
-                <img src="1.jpg" width="300" height="350">
-                <img src="2.jpg" width="300" height="350">
-                <img src="3.jpg" width="300" height="350">
-                <img src="4.jpg" width="300" height="350">
+                <img src="1.jpg" alt="Portfolio 1">
+                <img src="2.jpg" alt="Portfolio 2">
+                <img src="3.jpg" alt="Portfolio 3">
+                <img src="4.jpg" alt="Portfolio 4">
             </div>
         </div>
         
         <div class="services-section">
-            <h1 style="color: #000;font-size: 65px; margin-top: 0; margin-bottom: 0;">Layanan Kami</h1>
+            <h1 style="color: #000; margin-top: 0; margin-bottom: 0;">Layanan Kami</h1>
             <div class="services-container">
-        <div class="service-card" >
-            <div class="service-title">Wedding Planner</div>
-            <div class="service-description">
-                Membantu menemukan konsep dan mendampingi dari nol hingga resepsi selesai dilaksanakan.
+                <div class="service-card">
+                    <div class="service-title">Wedding Planner</div>
+                    <div class="service-description">
+                        Membantu menemukan konsep dan mendampingi dari nol hingga resepsi selesai dilaksanakan.
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-title">Wedding Organizer</div>
+                    <div class="service-description">
+                        Kami pilihan terpercaya yang dapat Anda andalkan untuk menyelenggarakan acara pernikahan Anda.
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-title">Wedding Package</div>
+                    <div class="service-description">
+                        Paket pernikahan yang dapat dipilih sesuai budget dan kebutuhan yang Anda inginkan.
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-title">Graduation</div>
+                    <div class="service-description">
+                        Kami pilihan terpercaya yang dapat Anda andalkan untuk menyelenggarakan acara wisuda Anda.
+                    </div>
+                </div>
             </div>
         </div>
         
-        <div class="service-card">
-            <div class="service-title">Wedding Organizer</div>
-            <div class="service-description">
-                Kami pilihan terpercaya yang dapat Anda andalkan untuk menyelenggarakan acara pernikahan Anda.
-            </div>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-title">Wedding Package</div>
-            <div class="service-description">
-                Paket pernikahan yang dapat dipilih sesuai budget dan kebutuhan yang Anda inginkan.
-            </div>
-        </div>
-        
-        <div class="service-card">
-            <div class="service-title">Graduation</div>
-            <div class="service-description">
-                Kami pilihan terpercaya yang dapat Anda andalkan untuk menyelenggarakan acara wisuda Anda.
-            </div>
-        </div>
-    </div>
-        </div>
         <section class="contact-section">
-        <h1 class="contact-title">Kontak Nissa MUA Untuk Konsultasi Jadwal & Booking</h1>
-        <p class="contact-description" style="color: #ffffff;">
-            Hubungi kontak WA Nissa MUA sekarang untuk konsultasi kebutuhan Makeup dan dapatkan penawaran harga<br>
-            Jasa Makeup Artist terbaru. Segera booking Nissa MUA Bekasi untuk berbagai acara Anda di tahun 2025,<br>
-            seperti Pre-Wedding, Wedding, Wisuda, Sweet Seventeen dan lainnya.
-        </p>
-        <a href="https://wa.me/6285711629210" class="whatsapp-button">
-            <img src="logowap2" width="25" height="25" style="vertical-align: middle;">
-            <i class="fab fa-whatsapp"></i> 085711629210
-        </a>
-    </section>
+            <h1 class="contact-title">Kontak Nissa MUA Untuk Konsultasi Jadwal & Booking</h1>
+            <p class="contact-description">
+                Hubungi kontak WA Nissa MUA sekarang untuk konsultasi kebutuhan Makeup dan dapatkan penawaran harga<br>
+                Jasa Makeup Artist terbaru. Segera booking Nissa MUA Bekasi untuk berbagai acara Anda di tahun 2025,<br>
+                seperti Pre-Wedding, Wedding, Wisuda, Sweet Seventeen dan lainnya.
+            </p>
+            <a href="https://wa.me/6285711629210" class="whatsapp-button">
+                <img src="logowap2" width="25" height="25" alt="WhatsApp">
+                085711629210
+            </a>
+        </section>
     </main>
 </body>
 </html>
